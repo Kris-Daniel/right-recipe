@@ -55,6 +55,7 @@ public class PlayerRecipe : MonoBehaviour
     {
         ingredient.transform.SetParent(listContent.transform);
         ingredient.GetComponent<ReorderableListElement>().isDroppableInSpace = true;
+        ingredient.GetComponent<DraggableVegetable>().ToggleBorder(true);
     }
     
     public void RemoveFromRecipeListContent(GameObject ingredient)

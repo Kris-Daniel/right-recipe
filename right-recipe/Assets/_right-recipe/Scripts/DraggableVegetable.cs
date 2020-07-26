@@ -5,8 +5,9 @@ using Scripts;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class DragEvents : MonoBehaviour
+public class DraggableVegetable : MonoBehaviour
 {
+    [SerializeField] GameObject border;
 
     public void ChangeScale(float scale)
     {
@@ -29,6 +30,11 @@ public class DragEvents : MonoBehaviour
         {
             dragManager.RemoveDraggedItem(gameObject);
         }
+    }
+
+    public void ToggleBorder(bool isActive)
+    {
+        border.SetActive(isActive);
     }
     
 }
